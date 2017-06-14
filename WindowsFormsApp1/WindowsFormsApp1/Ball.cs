@@ -60,19 +60,10 @@ namespace WindowsFormsApp1
             return false;
             
         }
-
-
         private void Score(Player winningPlayer)
         {
             winningPlayer.score++;
             form.Controls.Remove(ball);
-
-
-
-
-
-
-
 
         }
 
