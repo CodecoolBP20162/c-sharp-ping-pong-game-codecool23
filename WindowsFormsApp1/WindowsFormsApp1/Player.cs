@@ -31,7 +31,11 @@ namespace WindowsFormsApp1
                 _score = value;
                 scoreLabel.Text = score.ToString();
             }
+            
         }
+
+        
+
 
         public Player(PictureBox paddle1, Label scoreLabel)
         {
@@ -86,6 +90,14 @@ namespace WindowsFormsApp1
 
 
             DoMove(goingUp);
+        }
+
+        private void ScoreReached()
+        {
+            if(_score == 100)
+            {
+                Application.Exit();
+            }
         }
 
         private void DoMove(bool? goingUp)

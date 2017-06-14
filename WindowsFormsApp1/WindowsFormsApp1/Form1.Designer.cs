@@ -38,6 +38,7 @@
             this.labelPlayer2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelPlayer1 = new System.Windows.Forms.Label();
+            this.labelMode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Paddle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Paddle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
@@ -84,7 +85,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(596, 9);
+            this.label1.Location = new System.Drawing.Point(592, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 43);
             this.label1.TabIndex = 3;
@@ -97,7 +98,7 @@
             this.labelPlayer2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelPlayer2.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelPlayer2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelPlayer2.Location = new System.Drawing.Point(567, 61);
+            this.labelPlayer2.Location = new System.Drawing.Point(563, 79);
             this.labelPlayer2.Name = "labelPlayer2";
             this.labelPlayer2.Size = new System.Drawing.Size(41, 43);
             this.labelPlayer2.TabIndex = 4;
@@ -111,13 +112,12 @@
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(633, 61);
+            this.label3.Location = new System.Drawing.Point(629, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 43);
             this.label3.TabIndex = 5;
             this.label3.Text = "\\";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // labelPlayer1
             // 
@@ -126,11 +126,22 @@
             this.labelPlayer1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelPlayer1.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelPlayer1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelPlayer1.Location = new System.Drawing.Point(694, 61);
+            this.labelPlayer1.Location = new System.Drawing.Point(690, 79);
             this.labelPlayer1.Name = "labelPlayer1";
             this.labelPlayer1.Size = new System.Drawing.Size(41, 43);
             this.labelPlayer1.TabIndex = 6;
             this.labelPlayer1.Text = "0";
+            // 
+            // labelMode
+            // 
+            this.labelMode.AutoSize = true;
+            this.labelMode.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelMode.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelMode.Location = new System.Drawing.Point(588, 9);
+            this.labelMode.Name = "labelMode";
+            this.labelMode.Size = new System.Drawing.Size(112, 21);
+            this.labelMode.TabIndex = 7;
+            this.labelMode.Text = "Ultimate mode";
             // 
             // Form1
             // 
@@ -138,6 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1337, 700);
+            this.Controls.Add(this.labelMode);
             this.Controls.Add(this.labelPlayer1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelPlayer2);
@@ -151,7 +163,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pong";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Paddle2)).EndInit();
@@ -172,6 +183,7 @@
         private System.Windows.Forms.Label labelPlayer2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelPlayer1;
+        private System.Windows.Forms.Label labelMode;
     }
 }
 

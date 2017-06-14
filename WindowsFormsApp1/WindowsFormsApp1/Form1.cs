@@ -15,18 +15,22 @@ namespace WindowsFormsApp1
         
         Player player1, player2;
         public List<Ball> balllist;
-
-
-       
         public Form1()
+
         {
             InitializeComponent();
 
             player1 = new Player(Paddle1, labelPlayer1);
             player2 = new Player(Paddle2, labelPlayer2);
             balllist = new List<Ball>();
+
             StartNewGame();
         }
+
+        
+
+
+        
 
         private void StartNewGame()
         {
@@ -53,6 +57,7 @@ namespace WindowsFormsApp1
             {
                 StartNewGame();
             }
+           
             
         }
 
@@ -62,19 +67,12 @@ namespace WindowsFormsApp1
         {
             
             CheckKeys(e, true);
-
-
-
-            /*if(e.KeyCode == Keys.Up)
-            {
-                isUpPressed = true;
-            } else if (e.KeyCode == Keys.Down)
-            {
-                isDownPressed = true;
-            }*/
-
-
+            
         }
+
+        
+
+        
 
         private void CheckKeys(KeyEventArgs e, bool isDown)
         {
@@ -97,33 +95,23 @@ namespace WindowsFormsApp1
                     player2.isDownPressed = isDown;
                     break;
 
+                case Keys.Escape:
+                    Application.Exit();
+                    break;
+
+               
+                    
+
 
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             CheckKeys(e, false);
-
-
-            /*if (e.KeyCode == Keys.Up)
-            {
-                isUpPressed = false;
-            }
-            else if (e.KeyCode == Keys.Down)
-            {
-                isDownPressed = false;
-            }*/
+            
         }
 
     }
